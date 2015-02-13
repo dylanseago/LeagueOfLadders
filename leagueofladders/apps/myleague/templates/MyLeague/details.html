@@ -1,0 +1,17 @@
+<h2>{{ league.name }}</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <td>Summoner ID</td>
+    <td>Nickname</td>
+  </tr>
+  </thead>
+  <tbody>
+  {% for member in league.membership_set.all %}
+    <tr>
+      <td>{{ member.summoner_id }}</td>
+      <td>{{ member.nickname }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
