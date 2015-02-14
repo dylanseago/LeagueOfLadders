@@ -1,5 +1,5 @@
-### Database ignore
-db/
+### SQLite Database ignore
+*.sqlite3
 
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm

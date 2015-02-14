@@ -1,13 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 
 from leagueofladders.apps.myleague.models import League
 
 
 def details(request, league_id):
-    league = League.objects.get(pk=league_id)
-    context = {'league': league}
-    return render(request, 'MyLeague/details.html', context)
+    league = get_object_or_404(League, pk=league_id)
+    return render(request, 'MyLeague/details.html', {'league': league})
 
 
 def edit(request, league_id):
